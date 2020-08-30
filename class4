@@ -1,0 +1,196 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+import pandas as pd
+
+
+# In[26]:
+
+
+df=pd.read_csv("E:\Datascience\List_of_countries_by_employment_rate.csv")
+
+
+# In[27]:
+
+
+df.tail(10)
+
+
+# In[28]:
+
+
+print(df)
+
+
+# In[29]:
+
+
+df.sort_values('Employment rate (%)',ascending=True)
+
+
+# In[30]:
+
+
+df.count()
+
+
+# In[31]:
+
+
+df.columns
+
+
+# In[34]:
+
+
+df['vivek']=df['Country']+df['Source']
+df
+
+
+# In[35]:
+
+
+df.drop(['vivek'],axis=1)
+
+
+# In[36]:
+
+
+df
+
+
+# In[49]:
+
+
+df.loc[(df['Source']=='Kosovo Agency of Statistics') & (df['Date of information']=='2019')]
+
+
+# In[60]:
+
+
+df.loc[(df['Employment rate (%)']>=70) & (df['Date of information']=='2019')]
+
+
+# In[48]:
+
+
+df
+
+
+# In[61]:
+
+
+import numpy as np
+
+
+# In[62]:
+
+
+list=[1,2,3,4,5]
+
+
+# In[63]:
+
+
+print(type(list))
+
+
+# In[65]:
+
+
+arr=np.array(list)
+
+
+# In[66]:
+
+
+print(type(arr))
+
+
+# In[67]:
+
+
+arr
+
+
+# In[69]:
+
+
+arr[0:3]
+
+
+# In[70]:
+
+
+arr.shape
+
+
+# In[71]:
+
+
+list1=[1,2,3,4,5]
+list2=[6,7,8,9,10]
+
+
+# In[72]:
+
+
+arr=np.array([list1,list2])
+
+
+# In[73]:
+
+
+arr
+
+
+# In[76]:
+
+
+arr.reshape(5,2)
+
+
+# In[77]:
+
+
+arr[0][4]
+
+
+# In[84]:
+
+
+np.random.random_sample((1,1))
+
+
+# In[102]:
+
+
+np.random.randint(1,5,1)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
